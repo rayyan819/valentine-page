@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Valentine's Day Surprise</title>
+    <title>Will You Be My Valentine?</title>
     <style>
         body {
             background-color: #FFC0CB;
@@ -29,6 +29,12 @@
             border-radius: 12px;
             position: relative;
         }
+        .btn.no {
+            background-color: red;
+        }
+        .btn.yes {
+            background-color: green;
+        }
         .btn.no:hover {
             position: absolute;
             left: calc(100% - 70px);
@@ -36,10 +42,13 @@
     </style>
 </head>
 <body>
-    <h1>Will you be my Valentine?</h1>
+    <h1>Will You Be My Valentine?</h1>
+    <div>
+        <img src="https://placekitten.com/400/400" alt="Cute Cat" />
+    </div>
     <div class="buttons">
-        <button class="btn yes" onclick="alert('Yay! Happy Valentine\'s Day!')">Yes</button>
-        <button class="btn no">No</button>
+        <button class="btn yes" onclick="alert('Yay! Happy Valentine\'s Day!')">YES</button>
+        <button class="btn no">ARE YOU SURE?</button>
     </div>
     <script>
         document.querySelector('.btn.no').addEventListener('mouseover', function() {
