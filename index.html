@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine's Day Surprise</title>
+    <style>
+        body {
+            background-color: #FFC0CB;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #FF69B4;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #FF69B4;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            position: relative;
+        }
+        .btn.no:hover {
+            position: absolute;
+            left: calc(100% - 70px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my Valentine?</h1>
+    <div class="buttons">
+        <button class="btn yes" onclick="alert('Yay! Happy Valentine\'s Day!')">Yes</button>
+        <button class="btn no">No</button>
+    </div>
+    <script>
+        document.querySelector('.btn.no').addEventListener('mouseover', function() {
+            this.style.left = Math.random() * (window.innerWidth - this.offsetWidth) + 'px';
+            this.style.top = Math.random() * (window.innerHeight - this.offsetHeight) + 'px';
+        });
+    </script>
+</body>
+</html>
